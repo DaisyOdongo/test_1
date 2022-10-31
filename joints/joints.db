@@ -1,0 +1,16 @@
+SELECT teachers.name, teachers.subject, students.name, students.year, students.adm_no
+   ...> FROM teachers 
+   ...> INNER JOIN students
+   ...> ON teachers.id = students.teacher_id;
+
+   #left 0uter join- returns all including those that don't meet the condition
+   SELECT teachers.name, teachers.subject, students.name, students.year, students.adm_no
+   ...> FROM teachers 
+   ...> INNER JOIN students
+   ...> ON teachers.id = students.teacher_id;
+
+    SELECT teachers.name, students.name 
+   ...> FROM teachers
+   ...> LEFT OUTER JOIN students
+   ...> ON students.teacher_id = teachers.id;
+   
